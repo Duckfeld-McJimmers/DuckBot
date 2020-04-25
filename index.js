@@ -12,7 +12,7 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	console.log('Ready!');
-	client.user.setActivity('WHAT THE DUCK FAT');
+	client.user.setActivity('quack quack');
 });
 
 client.on('message', async message => {
