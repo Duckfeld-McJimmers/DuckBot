@@ -1,12 +1,17 @@
 module.exports = {
 	name: 'duck',
-	async execute(message, args, gmduck, gnduck, axios) {
+	description: 'Use to get a random photo of a duck!',
+	async execute(message, args, axios, Discord) {
 			let getDuck = async () => {
 				let response = await axios.get("https://random-d.uk/api/v2/random");
 				let duck = response.data;
 				return duck;
 			}			
 			let duckValue = await getDuck();
-			message.channel.send(duckValue.url, duckValue.message);
+			const duckEmbed = new Discord.MessageEmbed()
+				.setTitle('A duck for you!')
+				.setImage(duckValue.url)
+				.setFooter('Powered by random-d.uk');
+			message.channel.send(duckEmbed);
 	},
 };

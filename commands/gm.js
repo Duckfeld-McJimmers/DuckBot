@@ -1,6 +1,9 @@
+const Discord = require('discord.js');
+const gmduck = new Discord.MessageAttachment('./images/gmduck.jpg');
 module.exports = {
 	name: 'gm',
-	execute(message, args, gmduck, gnduck) {		
+	description: 'Use to say good night to people!',
+	execute(message, args) {		
 		if (!message.mentions.users.size) {
 		return message.channel.send('Who are you going to say good morning to? Please mention a user.')		
 		}		

@@ -3,9 +3,6 @@ const Discord = require('discord.js');
 const {prefix} = require('./config.json');
 const client = new Discord.Client();
 const axios = require('axios');
-const gmduck = new Discord.MessageAttachment('./images/gmduck.jpg');
-const gnduck = new Discord.MessageAttachment('./images/gnduck.jpg');
-
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
@@ -25,12 +22,12 @@ client.on('message', async message => {
 	if (!client.commands.has(command)) return;
 
 try {
-	client.commands.get(command).execute(message, args, gmduck, gnduck, axios);
+	client.commands.get(command).execute(message, args, axios, Discord);
 } catch (error) {
 	console.error(error);
 	message.reply('there was an error trying to execute that command!');
 }
 
 });
-//require('dotenv').config();
+require('dotenv').config();
 client.login(process.env.TOKEN);
