@@ -29,5 +29,5 @@ try {
 }
 
 });
-require('dotenv').config();
+//require('dotenv').config();
 client.login(process.env.TOKEN);
