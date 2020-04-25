@@ -3,6 +3,7 @@ const gmduck = new Discord.MessageAttachment('./images/gmduck.jpg');
 module.exports = {
 	name: 'gm',
 	description: 'Use to say good night to people!',
+	usage: '@mentionPerson',
 	execute(message, args) {		
 		if (!message.mentions.users.size) {
 		return message.channel.send('Who are you going to say good morning to? Please mention a user.')		
