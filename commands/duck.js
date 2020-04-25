@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'duck',
-	async execute(message, args, axios) {
+	async execute(message, args, gmduck, gnduck, axios) {
 			let getDuck = async () => {
 				let response = await axios.get("https://random-d.uk/api/v2/random");
 				let duck = response.data;
