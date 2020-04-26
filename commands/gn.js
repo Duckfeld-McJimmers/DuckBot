@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const gnduck = new Discord.MessageAttachment('./images/gnduck.jpg');
 module.exports = {
 	name: 'gn',
-	description: 'Use to say good morning to people!',
+	description: 'Use to say good night to people!',
 	usage: '@mentionPerson',	
 	execute(message, args){
 		if (!message.mentions.users.size) {
