@@ -9,7 +9,7 @@ module.exports = {
 			}			
 			let duckValue = await getDuck();
 			const duckEmbed = new Discord.MessageEmbed()
-				.setTitle('A duck for you!')
+				.setTitle('Ducks!')
 				.setImage(duckValue.url)
 				.setFooter('Powered by random-d.uk');
 			message.channel.send(duckEmbed);
