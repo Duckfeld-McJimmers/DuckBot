@@ -11,7 +11,7 @@ module.exports = {
 			const duckEmbed = new Discord.MessageEmbed()
 				.setTitle('Ducks!')
 				.setImage(duckValue.url)
-				.setFooter('Powered by random-d.uk');
+				.setFooter('content from random-d.uk');
 			message.channel.send(duckEmbed);
 	},
 };

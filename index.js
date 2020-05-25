@@ -10,6 +10,20 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
+//Should i move this bundle of code elsewhere or is it good here? I just want to clarify.
+const http = require('http');
+const express = require('express');
+const app = express();
+app.get("/", (request, response) => {
+  console.log(Date.now() + " Ping Received");
+  response.sendStatus(200);
+});
+app.listen(process.env.PORT);
+setInterval(() => {
+  http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 280000);
+
+
 client.once('ready', () => {
 	console.log('Ready!');
 	client.user.setActivity('quack quack');
