@@ -26,7 +26,7 @@ setInterval(() => {
 
 client.once('ready', () => {
 	console.log('Ready!');
-	client.user.setActivity('quack quack');
+	client.user.setActivity('quack quack quack quack!');
 });
 
 client.on('message', async message => {
