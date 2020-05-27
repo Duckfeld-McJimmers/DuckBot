@@ -1,0 +1,19 @@
+{
+  "name": "duckbot",
+  "version": "1.0.0",
+  "description": "Quackiest bot on discord!",
+  "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Duckfeld McJimmers",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "discord.js": "^12.2.0",
+    "express.js": "^1.0.0"
+  }
+}
