@@ -9,7 +9,7 @@ jobs:
     - name: repo-sync
       uses: wei/git-sync@v1
       env:
-        SOURCE_REPO: "https://github.com/Duckfeld-McJimmers/DuckBot"
+        SOURCE_REPO: "https://github.com/Duckfeld-McJimmers/DuckBot.git"
         SOURCE_BRANCH: "master"
         DESTINATION_REPO: ${{ secrets.glitch_git_url }}
         DESTINATION_BRANCH: "master"
