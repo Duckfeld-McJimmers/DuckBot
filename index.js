@@ -21,7 +21,7 @@ app.get("/", (request, response) => {
 app.listen(process.env.PORT);
 setInterval(() => {
   http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
-}, 150000);
+}, 270000);
 
 
 client.once('ready', () => {
